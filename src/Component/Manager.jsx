@@ -11,7 +11,7 @@ export const Manager = () => {
   const passwordref = useRef();
 
   const getPasswords = async () => {
-    let req = await fetch("http://localhost:3000/");
+    let req = await fetch("https://password-manager-ruddy.vercel.app/");
     let password = await req.json();
     console.log(password);
     setformData(password);
@@ -44,18 +44,18 @@ export const Manager = () => {
       form.username.length > 3 &&
       form.password.length > 3
     ) {
-      await fetch("http://localhost:3000/", {
+      await fetch("https://password-manager-ruddy.vercel.app/", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: form.id }),
       });
-      // await fetch("http://localhost:3000/", {
+      // await fetch("https://password-manager-ruddy.vercel.app/", {
       //   method: " DELETE",
       //   headers: { "content-type": "application/json" },
       //   body: JSON.stringify({ id: form.id }),
       // });
 
-      await fetch("http://localhost:3000/", {
+      await fetch("https://password-manager-ruddy.vercel.app/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ ...form, id: uuidv4() }),
