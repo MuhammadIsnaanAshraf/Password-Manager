@@ -3,13 +3,17 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const { MongoClient } = require("mongodb");
 const cors = require("cors");
-
+const dbName = "lockBox";
+try {
 const url =
   "mongodb+srv://ashrafmisnaan:ueSH5qKZuHNDn7dZ@cluster0.9q8p6zv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(url);
 
-const dbName = "lockBox";
+// const dbName = "lockBox"; 
 client.connect();
+} catch (error) {
+  
+}
 const app = express();
 app.use(bodyParser.json());
 const port = 3000;
