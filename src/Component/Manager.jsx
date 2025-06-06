@@ -269,6 +269,7 @@ export const Manager = () => {
                           onClick={() => {
                             editPassword(item.id);
                           }}
+                          alt="Edit"
                           style={{
                             width: "20px",
                             height: "20px",
@@ -281,6 +282,7 @@ export const Manager = () => {
                         <lord-icon
                           src="https://cdn.lordicon.com/bhvdbxim.json"
                           trigger="hover"
+                          alt="Delete"
                           onClick={() => {
                             deletepassword(item.id);
                           }}
