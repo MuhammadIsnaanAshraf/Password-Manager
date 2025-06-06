@@ -204,7 +204,7 @@ export const Manager = () => {
 
         <span className="sm:px-2">Add</span>
       </button>
-      <div className="my-5">
+      <div className="my-5 mx-2">
         <h3 className="font-bold  my-4 text-left text-2xl">All passwords</h3>
         {formData.length === 0 && (
           <div className="mt-10">No password to show</div>

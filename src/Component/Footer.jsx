@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () => {
   return (
-    <div className="bg-slate-900 flex flex-col justify-center items-center min-h-16 text-white py-1 mt-auto">
+    <div className="bg-slate-900 flex flex-col justify-center items-center  text-white py-1 mt-auto">
       <div className="text-green-500 font-bold text-xl py-1">
         <span>&lt;</span>
         <span className="text-white">
